@@ -18,7 +18,7 @@ class NewsModel(models.Model):
     news_category = models.ForeignKey(NewsCategoryModel, on_delete=models.CASCADE)
     news_count = models.IntegerField()
     news_descriptions = models.TextField()
-    news_image = models.FileField(upload_to="news_images")
+    news_images = models.FileField(upload_to="news_images/")
     news_created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

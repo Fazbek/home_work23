@@ -1,8 +1,8 @@
-<!--{% load static %}&ndash;&gt;-->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,10 +30,11 @@
             <article>
                 <h2>{{ news.news_title }}</h2>
                 <p style="width:300px">{{ news.news_descriptions }}</p>
-                <img src="{{ news.news_image.url }}">
+                <img src="{{ news.news_images.url }}">
             </article>
         {% endfor %}
     </section>
-
+    <a href="edit/{{ news_edit.pk }}"><button>Edit news</button></a>
+    <a href="delete/{{ news_edit.pk }}"><button>Delete news</button></a>
 </body>
 </html>

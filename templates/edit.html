@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Edit news</title>
+</head> ews_edit.pk %}">
+        {% csrf_token %}
+        <p>
+            <label for="news_title">Edit the title</label><br>
+            <input type="text" id="news_title" name="news_title" value="{{ news_edit.news_title }}" />
+        </p>
+        <p>
+            <label for="news_descriptions">Edit the description</label><br>
+            <input type="text" id="news_descriptions" name="news_descriptions" value="{{ news_edit.news_descriptions }}" />
+        </p>
+        <input type="submit" value="Сохранить" >
+    </form>
+</body>
+</html>
